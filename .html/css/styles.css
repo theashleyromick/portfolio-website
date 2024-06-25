@@ -1,0 +1,274 @@
+:root {
+  --primary-color: #FF6F61;
+  --secondary-color: #6B5B95;
+  --accent-color: #88B04B;
+  --background-color: #F7CAC9;
+  --highlight-color: #92A8D1;
+}
+
+body {
+    background-color: #F7CAC9;
+    margin: auto;
+    padding: 20px;
+    font-family: "Big Shoulders Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    /*Sets the font size to 16pn */
+    line-height: 1.6;
+    /* Sets the line height to 1.6 */ 
+    color:  #4A4A4A;   
+}
+
+header {
+    background-color: #FF6F61;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #FF6F61;
+    text-align: center;
+}
+
+h2 {
+
+    font-size: 24px;
+    font-weight: 700;
+    color:  #FF6F61;
+}
+
+h3 {
+    font-size: 18pxs;
+    font-weight: 700;
+    color:  #FF6F61;
+}
+
+a { 
+    color: #6B5B95;
+}
+
+a:hover {
+    /*No underlineing when hovering over a link */
+    text-decoration: none;
+    color:  #6B5B95;
+}
+
+a:visited {
+    /*Visited link*/
+    color:  #6B5B95;
+}
+
+a:active {
+    /*selected link */
+    color:	 #6B5B95
+}
+
+.button, button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: 	#88B04B;
+    color:  #FFFFFF;
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid rgba(.6, .6, .6, 0.6);
+    transition: opacity 0.2s;
+}
+
+button:hover, 
+button:focus,
+.button:hover, 
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+.button__secondary {
+    background-color:  #92A8D1;
+    color: #000000;
+}
+
+.profile_portrait {
+    Float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+
+}
+
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+.profile { 
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.profile_text {
+    flex: 1 1 100px;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header_item {
+  color: #FF6F61;
+  flex: 0 1 200px;
+}
+
+.page-header_item:last-child {
+  color: #FF6F61;
+flex-grow: 1;
+text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin-left: auto;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list_item {
+  color: #FFFFFF;
+} 
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.grid_item {
+  background-color: #88B04B;
+  color: #FFFFFF;
+  position: relative;
+  grid-gap: 20px;
+  width: auto;
+  min-height: auto;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.grid__item:last-child {
+  background-color: #88B04B;
+  color: #FFFFFF;
+  width: auto;
+  min-height: auto;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+  margin: 5px;
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 5px;
+    padding: 5px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+svg {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  border: none;
+}
+
+svg * {
+  transform-box: fill-box;
+}
+
+.hand_left {
+  animation: bounce .2s infinite;
+}
+
+@keyframes bounce {
+  50% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
+}
+
+.standard-label {
+  display: grid;
+  grid-template-columns: 100px 400px;
+  grid-gap: 10px
+}
+
+
+
+/*
+1. **Primary Color**: #FF6F61 (Living Coral)
+   - **Text on Primary**: #FFFFFF (White)
+
+2. **Secondary Color**: #6B5B95 (Passionate Purple)
+   - **Text on Secondary**: #FFFFFF (White)
+
+3. **Accent Color**: #88B04B (Greenery)
+   - **Text on Accent**: #FFFFFF (White)
+
+4. **Background Color**: #F7CAC9 (Rose Quartz)
+   - **Text on Background**: #4A4A4A (Dark Gray)
+
+5. **Highlight Color**: #92A8D1 (Serenity)
+   - **Text on Highlight**: #000000 (Black)
+
+  Layout:
+- **Header**: Use the Primary Color (#FF6F61) with White text (#FFFFFF).
+- **Navigation Bar**: Use the Secondary Color (#6B5B95) with White text (#FFFFFF).
+- **Main Content**: Use the Background Color (#F7CAC9) with Dark Gray text (#4A4A4A).
+- **Sidebar/Accent Sections**: Use the Accent Color (#88B04B) with White text (#FFFFFF).
+- **Footer**: Use the Highlight Color (#92A8D1) with Black text (#000000).*/
