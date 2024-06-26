@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #FF6F61;
-    --secondary-color: #6B5B95;
-    --accent-color: #88B04B;
-    --background-color: #F7CAC9;
-    --highlight-color: #92A8D1;
-    --text-color: #ffffff;
+    --primary-color: #536878;
+    --secondary-color: #365672;
+    --accent-color: #8295a7;
+    --background-color: #fff4e6;
+    --text-color: #052c4f;
+    --link-color: #021526;
     --primary-font: "Big Shoulders Display";
     --secondary-font: sans-serif;
     --primary-weight: 500;
@@ -25,7 +25,7 @@
   }
 
   header {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: var(--text-color);
     padding: 20px;
   }
@@ -33,7 +33,7 @@
   h1 {
     font-size: 30px;
     font-weight: var(--secondary-weight);
-    color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
   }
 
@@ -41,52 +41,55 @@
 
     font-size: 24px;
     font-weight: var(--secondary-weight);
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 h3 {
     font-size: 18pxs;
     font-weight: var(--secondary-weight);
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 a {
-    color: var(--secondary-color);
-    &:hover {
+    color: var(--link-color);
+    text-decoration: none;
+}
+    a:hover {
         text-decoration: none;
-        color: var(--secondary-color);
+        color: var(--text-color);
     }
-    &:visited {
+    a:visited {
         color: var(--secondary-color);
 
     }
-    &:active {
-        color: var(--secondary-color);
+    a:active {
+        color: var(--link-color);
     }
-}
+
 
 button {
 	border: none;
 	font-family: var(--primary-font), var(--secondary-font);
 	background-color: var(--accent-color);
-	color: var(--text-color);
+	color: var(--background-color);
 	text-decoration: none;
 	padding: 10px;
 	border-radius: 3px;
 	border-bottom: 2px solid rgba(.6, .6, .6, 0.6);
 	transition: opacity 0.2s;
-	&:hover {
+  }
+	button:hover {
 		cursor: pointer;
 		opacity: 0.8;
 	}
-	&:focus {
+	button:focus {
 		cursor: pointer;
 		opacity: 0.8;
-	}
-}
+  }
+
 
 .button__secondary {
-    background-color:  var(--highlight-color);
+    background-color:  var(--accent-color);
     color: var(--background-color);
 }
 
@@ -135,6 +138,7 @@ button {
 }
 
 .navigation-list {
+    color: var(--background-color);
     list-style-type: none;
     margin-left: auto;
     li {
@@ -144,7 +148,7 @@ button {
 }
 
 .navigation-list_item {
-    color: var(--text-color);
+    color: var(--background-color);
 }
 
 .grid {
@@ -157,9 +161,9 @@ button {
 
 .grid_item {
 	background-color: var(--accent-color);
-	color: var(--text-color);
+	color: var(--background-color);
 	position: relative;
-	grid-gap: 20px;
+	grid-gap: 5px;
 	width: auto;
 	min-height: auto;
 	margin: 5px;
@@ -170,7 +174,7 @@ button {
 .grid__item {
 	&:last-child {
 		background-color: var(--accent-color);
-		color: var(--text-color);
+		color: var(--background-color);
 		width: auto;
 		min-height: auto;
 		margin: 0;
@@ -239,4 +243,29 @@ svg {
 	display: grid;
 	grid-template-columns: 100px 400px;
 	grid-gap: 10px;
+}
+
+.skill {
+   font-family: var(--primary-font), var(--secondary-font); 
+   border-collapse: collapse;
+   width: 100%;
+}
+
+.skill-td, 
+.skill-th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.skill-tr:nth-child(even)
+{background-color: #cdd4db;}
+
+.skill-tr:hover {background-color: #ddd;}
+
+.skill-th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--text-color);
+    color: var(--background-color)
 }
