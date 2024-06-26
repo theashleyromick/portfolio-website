@@ -242,6 +242,30 @@ svg * {
   grid-gap: 10px;
 }
 
+.skill {
+  font-family: var(--primary-font), var(--secondary-font); 
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.skill-td, 
+.skill-th {
+   border: 1px solid #ddd;
+   padding: 8px;
+}
+
+.skill-tr:nth-child(even)
+{background-color: #cdd4db;}
+
+.skill-tr:hover {background-color: #ddd;}
+
+.skill-th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: var(--text-color);
+   color: var(--background-color)
+}
 
 /*
 1. **Primary Color**: #536878
