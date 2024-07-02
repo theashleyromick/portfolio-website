@@ -100,7 +100,18 @@ button {
     border-radius: 50%;
 }
 
+footer{
+    border-top: 1px solid color var(--accent-color);
+    text-align: center;
+    padding: 20px;
+}
+
 .page-footer {
+    position: flex;
+    border-top: 1px solid color var(--accent-color);
+    background: var(--background-color);
+    text-align: center;
+    padding: 20px;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -156,10 +167,12 @@ button {
 .grid {
     position: center;
 	display: relative;
+    place-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
 	padding: 5px;
 	margin: 5px;
+    vertical-align: center;
 }
 
 .grid_item {
