@@ -1,13 +1,28 @@
-let pokemonList = [
-    { name: 'Squirtle', height: '0.5', type: 'Water'},
-    { name: 'Charmander', height: '0.6', type: 'Fire'},
-    { name: 'Pikachu', height: '0.7', type: 'Electric'}
-];
+let pokemonRepository = (function() {
+    let pokemonList = [
+        { name: 'Squirtle', height: '0.5', type: 'Water'},
+        { name: 'Charmander', height: '0.6', type: 'Fire'},
+        { name: 'Pikachu', height: '0.7', type: 'Electric'}
+    ];
+
+    function getAll () {
+      return pokemonList;
+    }
+
+    function add(pokemon) {
+      pokemonList.push(pokemon);
+    }
+
+    return {
+      getAll: getAll,
+      add: add
+    };
+})();
 
 // Flag to ensure only one Pokemon gets the "Wow, that's big!" label
 let bigPokemonFlag = false;
 
-pokemonList.forEach(function(pokemon) {
+pokemonRepository.getAll().forEach(function(pokemon) {
     console.log(pokemon.name + ' is ' + pokemon.height + ' meters tall and is a ' + pokemon.type + ' type Pokemon!');
     if (parseFloat(pokemon.height) > 0.6 && !bigPokemonFlag) {
         document.write(pokemon.name + ': ' + pokemon.height + ' - ' + pokemon.type + ' - Wow, that\'s big!<br>');
