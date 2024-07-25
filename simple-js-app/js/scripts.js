@@ -13,7 +13,7 @@ let pokemonRepository = (function() {
       pokemonList.push(pokemon);
     }
 
-function addListItem(pokemon) {
+    function addListItem(pokemon) {
   let pokemonListElement = document.querySelector('.pokemon-list');
 
   let listItem = document.createElement('li');
@@ -23,10 +23,18 @@ function addListItem(pokemon) {
 
   button.classList.add('pokemon-button');
 
+  button.addEventListener('click', function() {
+    showDetails(pokemon);
+  });
+
   listItem.appendChild(button);
 
   pokemonListElement.appendChild(listItem);
-}
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+  }
 
     return {
       getAll: getAll,
